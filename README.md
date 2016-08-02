@@ -1,6 +1,7 @@
 # DQ | Design Quotes
 Better default colors for the web. A collection of Colors for nicer looking sites.
 
+[Demo](https://johnthachil.github.io/dq/)
 ## The Colors
 
 ```css
@@ -57,6 +58,7 @@ Better default colors for the web. A collection of Colors for nicer looking site
 .black {
     color: #111111;
 }
+```
 
 ## Contributing
 
@@ -69,5 +71,5 @@ Better default colors for the web. A collection of Colors for nicer looking site
 ## Authors
 
 * Color pallete  [mrmrs](http://mrmrs.io)
-* Site [john](http://johnthachil.github.io)
+* Site [John](http://johnthachil.github.io)
 
