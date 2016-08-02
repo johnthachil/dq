@@ -1,3 +1,12 @@
+/*!
+ * @main.css - A Desiger's Quotes Website
+ * @Version: 1.0 Development
+ * @Url: johnthachil.github.io/dq
+ * @Author: John Thachil
+ * @Author url: johnthachil.github.io
+ * @Modules: jquery,normalize;
+ *
+ */
 body {
   font-family: 'Merriweather', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -39,11 +48,8 @@ h1 {
   margin-bottom: 31px;
   margin-bottom: 1.722222222222222rem; }
 
-.bg-quote {
-  color: #0074D9;
-  width: 100%;
-  position: relative; }
-
+/* keyboard Keys
+   ========================================================================== */
 .keyboard {
   font-family: Verdana;
   text-align: center;
@@ -51,7 +57,7 @@ h1 {
   .keyboard b {
     margin-left: 20px;
     border: 2px solid;
-    padding: 5px 12px 7px 12px;
+    padding: 5px 12px 7px;
     border-radius: 2px;
     margin-right: 5px; }
 
@@ -65,7 +71,14 @@ h1 {
   top: 25px;
   color: #222;
   border-radius: 100px;
-  padding: 5px 12px 5px 12px; }
+  padding: 5px 12px; }
+
+/* Quote Section
+   ========================================================================== */
+.bg-quote {
+  color: #0074D9;
+  width: 100%;
+  position: relative; }
 
 .quote-container {
   margin: 0 auto;
@@ -73,7 +86,7 @@ h1 {
   padding-top: 7em; }
 
 .quote-wrapper {
-  padding: 0 20px 100px 20px; }
+  padding: 0 20px 100px; }
   .quote-wrapper .left-quote {
     font-size: 4em; }
   .quote-wrapper .author {
@@ -81,8 +94,8 @@ h1 {
     float: right;
     font-size: 1.5em; }
 
-.quote-wrapper:before,
-.quote-wrapper:after {
+.quote-wrapper:after,
+.quote-wrapper:before {
   content: " ";
   /* 1 */
   display: table;
@@ -91,24 +104,16 @@ h1 {
 .quote-wrapper:after {
   clear: both; }
 
-.next {
-  border: 2px solid #222;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  text-decoration: none;
-  padding: 10px 20px 10px 20px;
-  border-radius: 2px;
-  color: #222; }
-
+/* Modal
+   ========================================================================== */
 .modal {
   display: none;
   background-color: white;
   width: 100%;
   height: 100vh;
   position: absolute;
-  top: 0px;
-  animation: fadeIn .5s; }
+  top: 0;
+  animation: fadeIn 0.5s; }
 
 @keyframes fadeIn {
   0% {
@@ -122,11 +127,18 @@ h1 {
   width: 30%;
   height: 330px;
   border-radius: 2px;
-  box-shadow: 0 10px 20px -10px rgba(17, 17, 17, 0.4);
-  animation: popu .5s; }
+  box-shadow: 0 10px 20px -10px rgba(17, 17, 17, 0.4), 0 0px 10px -5px rgba(17, 17, 17, 0.9);
+  animation: popUp 0.5s; }
 
+@keyframes popUp {
+  0% {
+    transform: scale(0.6);
+    opacity: 0; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
 .modal-text {
-  padding: 10px 40px 10px 40px;
+  padding: 10px 40px;
   opacity: 0.4;
   text-align: center; }
   .modal-text a {
@@ -137,21 +149,14 @@ h1 {
   .modal-text b {
     margin-left: 20px;
     border: 2px solid;
-    padding: 5px 12px 7px 12px;
+    padding: 5px 12px 7px;
     border-radius: 2px;
     margin-right: 5px; }
   .modal-text b:first-child {
-    padding: 7px 15px 9px 15px; }
+    padding: 7px 15px 9px; }
   .modal-text hr {
     margin-bottom: 23px; }
 
-@keyframes popu {
-  0% {
-    transform: scale(0.6);
-    opacity: 0; }
-  100% {
-    transform: scale(1);
-    opacity: 1; } }
 .modal-bg {
   height: 150px;
   width: 100%;
@@ -159,4 +164,5 @@ h1 {
   color: white; }
   .modal-bg h1 {
     text-align: center;
-    padding-top: 50px; }
+    padding-top: 50px;
+    font-size: 1.5em; }

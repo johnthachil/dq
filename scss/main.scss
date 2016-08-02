@@ -1,200 +1,189 @@
-
-body{
-  font-family: 'Merriweather', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+/*!
+ * @main.css - A Desiger's Quotes Website
+ * @Version: 1.0 Development
+ * @Url: johnthachil.github.io/dq
+ * @Author: John Thachil
+ * @Author url: johnthachil.github.io
+ * @Modules: jquery,normalize;
+ *
+ */
+body {
+    font-family: 'Merriweather', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 /* Scroll Bar
    ========================================================================== */
-
 body::-webkit-scrollbar {
-	width: 5px;
+    width: 5px;
 }
 body::-webkit-scrollbar-thumb:vertical {
-	background: black;
+    background: black;
 }
 body::-webkit-scrollbar-track {
-	background: white;
+    background: white;
 }
 body::-webkit-scrollbar-thumb:vertical:hover {
-	background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7);
 }
-hr{
+hr {
     border: 0;
     height: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-
-
 * {
-  line-height: 31px;
-  line-height: 1.722222222222222rem;
-
+    line-height: 31px;
+    line-height: 1.722222222222222rem;
 }
 h1 {
-  font-size: 40px;
-  font-size: 2.5rem;
-  line-height: 62px;
-  line-height: 3.444444444444445rem;
-  margin-top: 124px;
-  margin-top: 6.888888888888889rem;
-  margin-bottom: 31px;
-  margin-bottom: 1.722222222222222rem;
+    font-size: 40px;
+    font-size: 2.5rem;
+    line-height: 62px;
+    line-height: 3.444444444444445rem;
+    margin-top: 124px;
+    margin-top: 6.888888888888889rem;
+    margin-bottom: 31px;
+    margin-bottom: 1.722222222222222rem;
+}
+/* keyboard Keys
+   ========================================================================== */
+.keyboard {
+    font-family: Verdana;
+    text-align: center;
+    opacity: 0.8;
+    b {
+        margin-left: 20px;
+        border: 2px solid;
+        padding: 5px 12px 7px;
+        border-radius: 2px;
+        margin-right: 5px;
+    }
+}
+.space-bar {
+    transition: all 0.2s ease-in;
+    opacity: 0.3;
+}
+.info {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    color: #222;
+    border-radius: 100px;
+    padding: 5px 12px;
 }
 
-
-.bg-quote{
-  color: #0074D9;
-  width: 100%;
-  position: relative;
-
+/* Quote Section
+   ========================================================================== */
+.bg-quote {
+    color: #0074D9;
+    width: 100%;
+    position: relative;
 }
-.keyboard{
-  font-family: Verdana;
-  text-align: center;
-  opacity: 0.8;
-  b{
-    margin-left: 20px;
-    border: 2px solid;
-    padding: 5px 12px 7px 12px;
-    border-radius: 2px;
-    margin-right: 5px;
-  }
-
+.quote-container {
+    margin: 0 auto;
+    max-width: 910px;
+    padding-top: 7em;
 }
-.space-bar{
-  transition: all 0.2s ease-in;
-  opacity: 0.3
+.quote-wrapper {
+    padding: 0 20px 100px;
+    .left-quote {
+        font-size: 4em;
+    }
+    .author {
+        margin-top: 0;
+        float: right;
+        font-size: 1.5em;
+    }
 }
-.info{
-  position: absolute;
-  right: 20px;
-  top: 25px;
-  color: #222;
-  border-radius: 100px;
-  padding: 5px 12px 5px 12px;
-}
-.quote-container{
-  margin: 0 auto;
-  max-width: 910px;
-  padding-top: 7em;
-}
-
-.quote-wrapper{
-  padding: 0 20px 100px 20px;
-  .left-quote{
-    font-size: 4em;
-  }
-  .author{
-    margin-top: 0;
-    float: right;
-    font-size: 1.5em;
-  }
-
-}
-.quote-wrapper:before,
-.quote-wrapper:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+.quote-wrapper:after,
+.quote-wrapper:before {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 .quote-wrapper:after {
     clear: both;
 }
-.next{
-  border: 2px solid #222;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  text-decoration: none;
-  padding: 10px 20px 10px 20px;
-  border-radius: 2px;
-  color: #222;
+/* Modal
+   ========================================================================== */
+.modal {
+    display: none;
+    background-color: rgba(255, 255, 255, 8);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    animation: fadeIn 0.5s;
 }
-.modal{
-  display: none;
-  background-color: rgba(255, 255, 255, 8);
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0px;
-  animation: fadeIn .5s;
-
-}
-
 @keyframes fadeIn {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-
-  }
-
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-.modal-card{
-  font-family: 'Varela Round', sans-serif;
-
-  margin:10.5em auto;
-  background-color: white;
-  width:30%;
-  height: 330px;
-  border-radius: 2px;
-  box-shadow: 0 10px 20px -10px rgba(17, 17, 17, .4);
-  animation: popu .5s;
-}
-.modal-content{
-
-
-}
-.modal-text{
-  padding: 10px 40px 10px 40px;
-  opacity: 0.4;
-  text-align: center;
-  a{
-    text-decoration: none;
-  }
-  p{
-    margin-bottom: 0;
-    margin-top: 10px;
-
-  }
-  b{
-    margin-left: 20px;
-    border: 2px solid;
-    padding: 5px 12px 7px 12px;
+.modal-card {
+    font-family: 'Varela Round', sans-serif;
+    margin: 10.5em auto;
+    background-color: white;
+    width: 30%;
+    height: 330px;
     border-radius: 2px;
-    margin-right: 5px;
-  }
-  b:first-child{
-    padding: 7px 15px 9px 15px;
-
-  }
-  hr{
-    margin-bottom: 23px;
-  }
+    box-shadow: 0 10px 20px -10px rgba(17, 17, 17, .4),0 0px 10px -5px rgba(17, 17, 17, .9);
+    animation: popUp 0.5s;
 }
-@keyframes popu {
-  0%{
-    transform: scale(0.6);
-    opacity: 0;
-  }
-  100%{
-    transform: scale(1);
-    opacity: 1;
-
-  }
-
+@keyframes popUp {
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
-.modal-bg{
-  height: 150px;
-  width: 100%;
-  background-color: #E3757E;
-  color: white;
-  h1{
+
+.modal-content {}
+.modal-text {
+    padding: 10px 40px;
+    opacity: 0.4;
     text-align: center;
-    padding-top: 50px;
-  }
+    a {
+        text-decoration: none;
+    }
+    p {
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+    b {
+        margin-left: 20px;
+        border: 2px solid;
+        padding: 5px 12px 7px;
+        border-radius: 2px;
+        margin-right: 5px;
+    }
+    b:first-child {
+        padding: 7px 15px 9px;
+    }
+    hr {
+        margin-bottom: 23px;
+    }
+}
+
+.modal-bg {
+    height: 150px;
+    width: 100%;
+    background-color: #E3757E;
+
+    color: white;
+    h1 {
+        text-align: center;
+        padding-top: 50px;
+        font-size: 1.5em;
+    }
 }
