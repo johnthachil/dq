@@ -70,6 +70,11 @@ Better default colors for the web. A collection of Colors for nicer looking site
 
 ## Authors
 
-* Color pallete  [mrmrs](http://mrmrs.io)
 * Site [John](http://johnthachil.github.io)
+
+
+## Special Thanks 
+* Color pallete  [mrmrs](http://mrmrs.io)
+
+
 
